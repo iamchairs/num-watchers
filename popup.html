@@ -1,0 +1,60 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>numWatchers</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #wrapper {
+        width: 180px;
+      }
+      .small {
+        font-size: 10px;
+        font-color: #555;
+      }
+      input {
+        display: inline-block;
+        margin-left: 10px;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+  </head>
+  <body>
+    <div id="wrapper">
+      <button id="launch-button"></button>
+      <h3>Position:</h3>
+      <div id="top-left">
+        Top Left: <input type="radio" name="position" />
+      </div>
+      <div id="top-right">
+        Top Right: <input type="radio" name="position" />
+      </div>
+      <div id="bottom-left">
+        Bottom Left: <input type="radio" name="position" />
+      </div>
+      <div id="bottom-right">
+        Bottom Right: <input type="radio" name="position" />
+      </div>
+
+      <div class="small">
+        (all changes take affect on page refresh)
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
+
